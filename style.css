@@ -1,114 +1,117 @@
 body {
+	font-family: sans-serif;
+	background-color: black;
+	color: white;
 	padding: 0;
 	margin: 0;
 	border: 0;
-	background-color: black;
-	color: white;
-	font-family: sans-serif;
+}
+
+.nav-tree li.folded {
+	display: none;
+}
+.nav-tree li.unfolded {
 }
 
 .sidebar {
+	font-size: 0.9rem;
+	background-color: #323131;
 	width: 250px;
 	border: 1px solid darkorange;
 	border: 0;
-	background-color: #323131;
-	color: #d9d9d9;
-	font-size: 0.9rem;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	padding-top: 1rem;
 }
 
-.tree {
+.nav-tree a:after {
+	width: 250px;
+}
+.nav-tree a {
+	color: #d9d9d9;
+}
+.nav-tree button {
+	color: #989898;
+}
+.nav-tree a:hover {
+}
+.nav-tree button:hover {
+}
+.nav-tree a:hover:after, .nav-tree button:hover {
+	background-color: #4b4a4a;
+}
+.nav-tree a:active:after, .nav-tree button:active {
+	background: #606060;
+}
+
+.nav-tree {
 	overflow: hidden;
 }
 
-.tree a:after {
-	width: 250px;
-}
-
-.tree a:after, .tree button {
-	border-radius: 0.25rem;
-}
-.tree a:hover {
-	color: #d9d9d9;
-}
-.tree button:hover {
-	color: #d9d9d9;
-}
-.tree a:hover:after, .tree button:hover {
-	background-color: #4b4a4a;
-}
-.tree a:active:after, .tree button:active {
-	background: #707070;
-}
-
-.tree ul {
+.nav-tree ul {
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	border: 0;
-	list-style-type: none;
 }
-
-.tree li {
+.nav-tree li {
 	position: relative;
 }
-
-.tree li:after {
-	content: "";
-	display: block;
-	clear: both;
-}
-
-.tree li ul {
+.nav-tree li ul {
 	margin-left: 1rem;
 }
 
-.tree button {
+.nav-tree button {
 	background: transparent;
-	color: inherit;
 	font-size: inherit;
 	font-family: inherit;
 	line-height: inherit;
-	border: 0;
 	padding: 0;
 	margin: 0;
-	display: block;
-	width: 1.5rem;
+	border: 0;
+	width: 2rem;
 	height: 100%;
+	display: block;
 	cursor: pointer;
 	position: absolute;
 	z-index: 1;
 	top: 0;
 	left: 0;
-	/*border: 1px dotted lightblue;*/
 }
 
-.tree a {
+.nav-tree a {
 	background: transparent;
-	color: inherit;
 	font-size: inherit;
 	line-height: inherit;
 	text-decoration: none;
-	display: block;
+	margin: 0;
+	padding: 0.35rem;
+	padding-right: 0.25rem;
+	padding-left: 2.25rem;
 	border: 0;
-	padding: 0.35rem 0;
-	padding-left: 2rem;
+	display: block;
 	position: relative;
 	z-index: 0;
-	/*border: 1px dashed blue;*/
 }
-
-.tree a:after {
+.nav-tree a:after {
+	background-color: transparent;
 	content: "\00A0";
-	display: block;
 	border: 0;
 	height: 100%;
+	display: block;
 	position: absolute;
 	z-index: -1;
 	right: 0;
 	top: 0;
-	background-color: transparent;
+}
+.nav-tree button + a {
+	margin-left: 2rem;
+	padding-left: 0.25rem;
 }
 
-.tree button + a {
-	margin-left: 1.5rem;
-	padding-left: 0.5rem;
+.nav-tree a, .nav-tree button {
+	outline-offset: -2px;
+}
+.nav-tree a:after, .nav-tree button {
+	border-radius: 0.2rem;
 }
