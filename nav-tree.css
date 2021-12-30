@@ -1,32 +1,11 @@
-body {
-	font-family: sans-serif;
-	background-color: black;
-	color: white;
-	padding: 0;
-	margin: 0;
-	border: 0;
-}
-
 .nav-tree li.folded {
 	display: none;
 }
 .nav-tree li.unfolded {
 }
 
-.sidebar {
-	font-size: 0.9rem;
-	background-color: #323131;
-	width: 250px;
-	border: 1px solid darkorange;
-	border: 0;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	padding-top: 1rem;
-}
-
 .nav-tree a:after {
-	width: 250px;
+	width: 250px; /* edit this to fit a custom layout */
 }
 .nav-tree a {
 	color: #d9d9d9;
