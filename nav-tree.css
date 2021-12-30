@@ -95,12 +95,9 @@
 	border-radius: 0.2rem;
 }
 
-.nav-tree.inline {
-	display: inline-block;
-}
-.nav-tree.inline a:after, .nav-tree.inline button {
+.nav-tree.nav-tree-stretch a:after, .nav-tree.nav-tree-stretch button {
 	border-radius: 0;
 }
-.nav-tree.inline a:after {
+.nav-tree.nav-tree-stretch a:after {
 	width: 200%;
 }
