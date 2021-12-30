@@ -115,3 +115,13 @@ body {
 .nav-tree a:after, .nav-tree button {
 	border-radius: 0.2rem;
 }
+
+.nav-tree.inline {
+	display: inline-block;
+}
+.nav-tree.inline a:after, .nav-tree.inline button {
+	border-radius: 0;
+}
+.nav-tree.inline a:after {
+	width: 200%;
+}
